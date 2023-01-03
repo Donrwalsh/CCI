@@ -3,8 +3,8 @@ layout: default
 title: CCI
 ---
 <h1 class="title"> 
-    Cracking the Coding Interview
-    <!-- <i onclick="randomAssignment()" class="fas fa-graduation-cap"></i> {{ "clrs" | upcase }} -->
+    
+    <i onclick="randomAssignment()" class="fas fa-unlock"></i> {{ "Cracking the Coding Interview" }}
 </h1>
 <h2 class="randomAssignment"></h2>
 {% assign count = 0 %}
@@ -44,3 +44,15 @@ title: CCI
     </div>
 </div>
 
+<script>
+    function randomAssignment() {
+        var assignment = $('.randomAssignment');
+        var cards = $('.card > .card-body > .row > .clrs-incomplete').parent().parent().parent();
+        var random = Math.floor(Math.random()*cards.length);
+        var result = cards.eq(random).find('.clrs-link.clrs-incomplete').first().html().trim();
+        
+        var prefix = "random assignment: ";
+
+        assignment.text(prefix + result);
+    }
+</script>
