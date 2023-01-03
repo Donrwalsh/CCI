@@ -1,0 +1,13 @@
+author: Donrwalsh
+description: "Cracking the Coding Interview Solutions"
+url: "https://donrwalsh.github.io"
+
+collections:
+  solutions:
+    output: true
+highlighter: rouge
+baseurl: /CCI
+
+# Google Analytics
+google_analytics_id: "UA-160627836-1"
+keywords: "Cracking, Coding, Interview, Solutions, McDowell"

@@ -1,0 +1,46 @@
+---
+layout: default
+title: CCI
+---
+<h1 class="title"> 
+    Cracking the Coding Interview
+    <!-- <i onclick="randomAssignment()" class="fas fa-graduation-cap"></i> {{ "clrs" | upcase }} -->
+</h1>
+<h2 class="randomAssignment"></h2>
+{% assign count = 0 %}
+{% assign complete = 0 %}
+<div id="hub-container">
+    <div class="row">
+        {% for chapter in site.data.chapters %}
+
+            {% assign lookup = "ch" | append: chapter.id %}
+            <div class="col-xl-4 col-lg-6 col-12 mt-3 mb-3">
+                <div class="card">
+                    <h5 class="card-header">{{ "Chapter " | append: chapter.id}}<br /> {{ chapter.name}}</h5>
+                    <div class="card-body">
+                        <strong>Questions</strong>
+                        <div class="row no-gutters mt-2 mb-2">
+                            {% for solution in site.data[lookup] %}
+                                {% capture count %}{{ count | plus: 1 }}{% endcapture %}
+                                {% if solution.link == null %}
+                                    <div class="col-3 clrs-link clrs-incomplete">
+                                        {{ solution.name }}
+                                    </div>
+                                {% else %}
+                                    {% capture complete %}{{ complete | plus: 1 }}{% endcapture %}
+                                    <div class="col-3 clrs-link">
+                                        <a href="{{ solution.link }}">{{ solution.name }}</a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row" id="percent-container">
+        <h3 id="percent">{{complete | times: 1.0 | divided_by: count | times: 10000 | round | divided_by: 100.0}}% complete</h1>
+    </div>
+</div>
+

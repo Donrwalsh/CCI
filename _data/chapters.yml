@@ -1,0 +1,50 @@
+- id: "01"
+  name: Arrays and Strings
+
+- id: "02"
+  name: Linked Lists
+
+- id: "03"
+  name: Stacks and Queues
+
+- id: "04"
+  name: Trees and Graphs
+
+- id: "05"
+  name: Bit Manipulation
+
+- id: "06"
+  name: Math and Logic Puzzles
+
+- id: "07"
+  name: Object-Oriented Design
+
+- id: "08"
+  name: Recursion and Dynamic Programming
+
+- id: "09"
+  name: System Design and Scalability
+
+- id: "10"
+  name: Sorting and Searching
+
+- id: "11"
+  name: Testing
+
+- id: "12"
+  name: C and C++
+
+- id: "13"
+  name: Java
+
+- id: "14"
+  name: Databases
+
+- id: "15"
+  name: Threads and Locks
+
+- id: "16"
+  name: Additional Moderate Problems
+
+- id: "17"
+  name: Additional Hard Problems
